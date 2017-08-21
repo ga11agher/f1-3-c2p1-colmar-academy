@@ -1,0 +1,443 @@
+/** CSS is organized as follows:
+ * General
+ * Header
+ * Section 1: Banner
+ * Section 2: Campus Overview
+ * Section 3: Classes
+ * Section 4: Thesis
+ * Footer
+ **/
+
+ /* General */
+ a {
+   color: inherit;
+   text-decoration: none;
+ }
+
+ html {
+  font-family: 'Cabin', sans-serif;
+  font-size: 18px;
+ }
+
+h1 {
+  color: #46484f;
+  font-size: 2.5em;
+  margin-bottom: 24px;
+}
+
+h2 {
+  color: #46484f;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+section {
+  width: 100%;
+  display: flex;
+}
+
+section:nth-child(even) {
+  background-color: lightgray;
+}
+
+/* Header  */
+header {
+  align-items: center;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  align-items: center;
+  display: inline-flex;
+  margin-left: 24px;
+}
+
+.name-bold {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 32px;
+}
+
+.name {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: DarkGray;
+  height: 32px;
+  display: inline;
+}
+
+nav {
+  margin-right: 24px;
+}
+
+nav a:hover {
+  color: mediumblue;
+}
+
+nav li {
+  display: inline;
+  align-content: space-between;
+  margin: 8px;
+}
+
+nav.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header .logo, nav.desktop {
+    display: none;
+  }
+  nav.mobile {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+/* Section 1 */
+.button {
+  background: DimGray;
+  color: white;
+  padding: 8px 128px;
+}
+
+.button a:hover {
+  color: mediumblue;
+}
+
+.section-1-img {
+  width: 60%;
+  margin: 32px 24px;
+}
+
+.section-1-img img {
+  width: 100%;
+  height: auto;
+}
+
+.section-1-content {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  margin-right: 60px;
+  padding-top: 10%;
+  width: 40%;
+}
+
+/* Section 1 - Mobile */
+@media only screen and (max-width: 768px) {
+  section.section-1 {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .section-1-img img {
+    width: 100%;
+    height: auto;
+    margin: 0 0;
+  }
+
+  .section-1-content {
+    margin: 0 16px 32px 16px;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .section-1-content a, .section-1-content h1, .section-1-content h4 {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+/* Section 2 */
+.link {
+  color: mediumblue;
+}
+
+.link a:hover {
+  font-weight: bold;
+}
+
+.section-2-left {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 24px;
+  width: 60%;
+}
+
+.section-2-left img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.section-2-box {
+  align-items: center;
+  padding-top: 16px;
+  display: inline-flex;
+  width: 100%;
+}
+
+.section-2-content {
+  padding-left: 25px;
+  width: 65%;
+}
+
+.section-2-right {
+  border-left: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  width: 40%;
+}
+
+.section-2-box img {
+  margin: 16px 16px;
+  width: 35%;
+}
+
+.section-2-mobile {
+  display: none;
+}
+
+/* Section 2 - Mobile */
+@media only screen and (max-width: 1024px) {
+  .section-2-left {
+    width: 50%;
+    margin-left: 16px
+  }
+
+  .section-2-right {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-2 {
+    justify-content: center;
+  }
+
+  .section-2-left {
+    display: none;
+  }
+
+  .section-2-right {
+    display: none;
+  }
+
+  .section-2-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-2-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .section-2-box img {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: auto;
+  }
+
+  .section-2-content {
+    width: 90%;
+    margin: 16px 16px 16px 32px;
+  }
+
+}
+
+/* Section 3 */
+.section-3 {
+  display: block;
+}
+
+.section-3 h1 {
+  padding-top: 32px;
+  text-align: center;
+}
+
+.section-3-squares {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-3-square {
+  background-color: white;
+  margin-bottom: 32px;
+  margin-right: 32px;
+  width: 260px;
+}
+
+.section-3-square img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.square-text {
+  width: 220px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.section-3-mobile {
+  display: none;
+}
+
+/* Section 3 - Mobile */
+@media only screen and (max-width: 1024px) {
+  .section-3 {
+    padding-left: 16px;
+  }
+
+  .section-3-squares {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .section-3-square {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+    background-color: white;
+  }
+
+  .section-3 h4 {
+    padding-bottom: 32px;
+  }
+
+  .section-3-squares {
+    display: none;
+  }
+
+  .section-3-mobile {
+    display: block;
+    justify-content: center;
+    width: 90%;
+    max-width: 480px;
+    margin-bottom: 32px;
+  }
+
+  .section-3-mobile h4 {
+    background-color: #C5CAD7;
+    padding: 16px 0px 16px 16px;
+    margin-bottom: 8px;
+  }
+
+}
+
+/* Section 4  */
+.section-4 {
+  display: block;
+}
+
+.section-4-content {
+  display: inline-flex;
+}
+
+.section-4 h1 {
+  padding-bottom: 32px;
+  padding-top: 32px;
+  text-align: center;
+}
+
+.section-4-left {
+  margin-left: 24px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-4-right {
+  border-left: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  width: 40%;
+}
+
+.section-video {
+  margin: 32px 24px;
+}
+
+.video-mobile {
+  display: none;
+}
+
+/* Section 4 - Mobile */
+@media only screen and (max-width: 1024px) {
+  .section-4 h1 {
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .video-mobile {
+    display: block;
+  }
+  .section-4-content {
+    display: none;
+  }
+}
+
+/* Footer */
+footer {
+  height: 64px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #C5CAD7;
+  background-color: lightgray;
+  align-items: center;
+}
+
+footer span {
+  margin-left: 24px;
+  color: #687083;
+}
+
+footer nav ul li a {
+  color: #687083;
+}
+
+/* Footer - Mobile */
+@media only screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  footer {
+    border-top: 0px solid #C5CAD7;
+    height: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+}
